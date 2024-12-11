@@ -10,36 +10,26 @@ import SwiftUI
 
 struct PokerColorView: View {
     
-    let isRed:Bool
-    var titleName:String
-    var description: String
-    var iconName: String
-    var iconColor: Color {
-        if isRed{
-            return Color.red
-        } else{
-            return Color.black
-        }
-    }
+    let providedPokerColor:PokerColor
     
         var body: some View {
             NavigationStack{
             VStack{
                 
                 HStack(alignment:.top){
-                    Image(systemName: iconName)
+                    Image(systemName: providedPokerColor.iconName)
                         .font(.system(size: 50))
-                        .foregroundStyle(iconColor)
+                        .foregroundStyle(providedPokerColor.iconColor)
                         .frame(width:50)
                         .padding(.horizontal)
                         
                    Spacer()
                         .frame(width:20)
                     LazyVStack(alignment: .leading){
-                        Text(titleName)
+                        Text(providedPokerColor.titleName)
                             .fontWeight(.bold)
                             .font(.title)
-                        Text(description)
+                        Text(providedPokerColor.description)
                     }
                    
                       
@@ -51,7 +41,5 @@ struct PokerColorView: View {
 }
 
 
-#Preview {
-   LandingView()
-}
+
 

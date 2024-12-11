@@ -9,7 +9,15 @@ import SwiftUI
 
 struct PokerLandingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            List{
+                PokerColorView(providedPokerColor: heart)
+                PokerColorView(providedPokerColor: diamonds)
+                PokerColorView(providedPokerColor: club)
+                PokerColorView(providedPokerColor: spade)
+            }
+            .navigationTitle("Colors of Poker Cards")
+        }
     }
 }
 
