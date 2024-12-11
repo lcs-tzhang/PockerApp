@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PokerView: View {
+struct PokerColor: View {
     var body: some View {
         PokerColorView(isRed: true, titleName: "Heart", description: "Hearts are one of the red suits in a deck of playing cards and are often associated with love, emotions, and relationships. ", iconName: "heart.fill")
         PokerColorView(isRed: true, titleName: "Diamond", description:"Diamonds are the other red suit in the deck and are linked to wealth, material success, and ambition. They represent luxury, riches, and prosperity. ", iconName: "suit.diamond.fill")
@@ -18,5 +18,5 @@ struct PokerView: View {
 
 
 #Preview {
-    PokerView()
+    PokerColor()
 }
